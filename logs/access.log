@@ -1,0 +1,4 @@
+::ffff:127.0.0.1 - - [12/Nov/2024:07:24:54 +0000] "GET /img/sfondo.jpg HTTP/1.1" 200 9876 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; it-IT) WindowsPowerShell/5.1.22621.4249"
+::ffff:127.0.0.1 - - [12/Nov/2024:07:24:58 +0000] "GET /user HTTP/1.1" 200 24 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; it-IT) WindowsPowerShell/5.1.22621.4249"
+::ffff:127.0.0.1 - - [12/Nov/2024:07:56:23 +0000] "GET /user HTTP/1.1" 200 24 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; it-IT) WindowsPowerShell/5.1.22621.4249"
+::ffff:127.0.0.1 - - [12/Nov/2024:08:00:25 +0000] "GET /user HTTP/1.1" 200 24 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; it-IT) WindowsPowerShell/5.1.22621.4249"
