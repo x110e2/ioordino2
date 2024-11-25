@@ -15,10 +15,19 @@ import helmet from 'helmet';
 import { checkAuthentication,checkAuthorization } from './middleware/user-auth.js';
 import homerouter from './routes/home.js';
 import _404router from './routes/404.js';
+//import user_profile from './routes/user_profile.js';
 import usersrouter from './routes/users.js';
 import appError from './middleware/error.js';
+import cookieParser from 'cookie-parser';
 //import * as dotenv from 'dotenv/config';
 import dotenv from 'dotenv';
+import { v4 as uuidv4 } from 'uuid';
+import csurf from 'csurf';
+import passport from "passport";
+//import passportlocal from "passport-local";
+
+import Strategy from 'passport-local';
+//uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory
@@ -47,6 +56,24 @@ if(app.get('env')==='development'){
 app.use(helmet());
 
 app.use(express.static('public'));
+app.use(cookieParser());
+app.use(express.urlencoded({extended:true}));//legge post data
+passport.initialize();
+var Localstrategy=passport.Strategy();
+passport.use('local-login',new Localstrategy(
+        function(username,password,done){
+            if(username=="gianni"){
+                if(password=="123"){
+                    return done(null,{username:'gianni'});
+                }else{
+                    return done(null,false,{message:'password incorretta'});
+                }
+            }else{
+                return done(null,false,{message:"username non trovata"})
+            }
+        }
+    )
+);
 app.use(homerouter);
 app.use(usersrouter);
 app.use(_404router);
@@ -145,6 +172,7 @@ yargs(hideBin(process.argv)).command({
         }
     },
     handler(argv){
+        
         app.use(express.static('public'));
         // create a write stream (in append mode)
         // setup the logger

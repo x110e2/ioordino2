@@ -1,0 +1,53 @@
+/*npm install jsonwebtoken
+npm install uuid
+npm install -g nodemon
+npm install nodemon
+npm install debug
+npm install dotenv  //variabili d'ambiente
+npm install mysql2
+npm install helmet
+npm install morgan
+npm install yargs
+npm install express
+npn install csurf // attacchi cross site reference
+npm install passport-google-oauth20
+//npm install @types/passport-google-oauth20
+npm install passport-local
+npm install websocket
+
+SET-ExecutionPolicy Unrestricted
+
+git init
+git add .
+git status
+git config --global user.email "patriziomazzucco@gmail.com"
+git config --global user.name "patrizio mazzucco"
+git commit -m "Primo commit"
+
+
+
+import validator from 'validator';
+import morgan from 'morgan';
+import chalk from 'chalk';
+import yargs from 'yargs/yargs';
+import fs  from 'fs';
+import path  from 'path';
+import {hideBin} from 'yargs/helpers';
+import { type } from 'os';
+import * as fun from './app-fn.js';
+import { EventEmitter } from 'events';
+import { URL,fileURLToPath } from 'url';
+import * as http from 'node:http';
+import express from 'express';
+import helmet from 'helmet';
+import cookie-parser;
+
+//import * as dotenv from 'dotenv/config';
+import dotenv from 'dotenv';
+import { v4 as uuidv4 } from 'uuid';
+
+generazione chiave privata:
+openssl genrsa -out rsa.private 1024
+generazione chiave pubblica dopo aver creato chiave privata
+openssl rsa -in rsa.private -out rsa.public -pubout -outform PEM
+*/

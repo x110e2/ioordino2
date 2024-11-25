@@ -1,5 +1,5 @@
 import fs from 'fs';
-import mysql from 'mysql';
+//import mysql from 'mysql';
 import chalk from 'chalk';
 
 export default function getCliente2(nome){
