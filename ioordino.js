@@ -62,7 +62,7 @@ passport.initialize();
 var Localstrategy=passport.Strategy();
 passport.use('local-login',new Localstrategy(
         function(username,password,done){
-            if(username=="gianni"){
+            if(username=="gianni"){ 
                 if(password=="123"){
                     return done(null,{username:'gianni'});
                 }else{

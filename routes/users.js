@@ -12,6 +12,7 @@ import passport from 'passport';
 
 
 const router =express.Router();
+sdjjdsk
 const d=Debug("app:generale");
 const ddb=Debug("app:db");
 //export router.get('/user/xx', (req,res,next)=>{});
